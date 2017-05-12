@@ -1673,7 +1673,7 @@ bool Ship::IsHyperspacing() const
 // Check if this ship is hyperspacing, specifically via a jump drive.
 bool Ship::IsUsingJumpDrive() const
 {
-	return IsHyperspacing() && isUsingJumpDrive;
+	return (hyperspaceSystem || hyperspaceCount) && isUsingJumpDrive;
 }
 
 
